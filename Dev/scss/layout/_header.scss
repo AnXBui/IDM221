@@ -1,0 +1,35 @@
+/* =============
+    Header
+============= */
+
+.mainNav{
+position: fixed;
+height: 4.5rem;
+width: 100%;
+padding: 1rem 2rem;
+// background-color: white;
+z-index: 999;
+
+    .logo{
+      img{
+        height: 2rem;
+      }
+    }
+
+    .menuButton{
+      height: 90%;
+      width: 2.75rem;
+      background-color: transparent;
+      border: 0;
+
+    }
+}
+
+
+.midnightHeader.default{
+  background-color: blue;
+}
+
+.midnightHeader.none{
+  background-color:red;
+}
