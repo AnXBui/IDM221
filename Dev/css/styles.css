@@ -390,14 +390,37 @@ a {
 
 body {
   --bg-color: white;
-  --text-color: black;
+  --text-color: #191b21;
   --border-wght: 1.5px;
   color: var(--text-color);
+}
+
+main {
+  background-color: var(--bg-color);
 }
 
 .flexBetween {
   display: flex;
   justify-content: space-between;
+}
+
+body {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* =============
@@ -434,7 +457,7 @@ body {
 /* =============
     Buttons
 ============= */
-button {
+button, input {
   background-color: transparent;
   border: 0;
 }
@@ -497,7 +520,7 @@ textarea {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-  padding: 6rem 10% 4rem;
+  padding: 6rem 10% 2rem;
   overscroll-behavior: contain;
 }
 @media (min-width: 768px) {
@@ -505,14 +528,14 @@ textarea {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 1.5rem;
-    padding: 8%;
+    padding: 10% 8% 5%;
   }
 }
 @media (min-width: 992px) {
   .scrollWrapper {
     grid-template-columns: 2fr 3fr;
     grid-gap: 2rem;
-    padding: 10%;
+    padding: 8% 10% 8%;
   }
 }
 
@@ -522,8 +545,10 @@ textarea {
   margin-bottom: 2.25rem;
   margin-right: 2rem;
 }
-.toggleMenuOptions:last-child {
-  border-bottom: 0;
+@media (min-width: 768px) {
+  .toggleMenuOptions:last-child {
+    border-bottom: 0;
+  }
 }
 
 .toggleMenuLists {
@@ -550,9 +575,32 @@ textarea {
   transform: translateX(100vw);
 }
 
+.menuFooter {
+  align-self: end;
+}
+
 /* =============
     Helpers
 ============= */
+@media (min-width: 992px) {
+  .mobOnly {
+    display: none;
+  }
+}
+
+.desktopOnly {
+  display: none;
+}
+@media (min-width: 992px) {
+  .desktopOnly {
+    display: block;
+  }
+}
+
+.width100 {
+  width: 100%;
+}
+
 .p10 {
   padding: 1rem;
 }
@@ -569,8 +617,17 @@ textarea {
   padding-bottom: 6rem;
 }
 
+.mb05 {
+  margin-bottom: 0.5rem;
+}
+
 .mb10 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .mb10 {
+    margin-bottom: 1rem;
+  }
 }
 
 .mt10 {
@@ -578,15 +635,30 @@ textarea {
 }
 
 .mb20 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .mb20 {
+    margin-bottom: 2rem;
+  }
 }
 
 .mb30 {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .mb30 {
+    margin-bottom: 3rem;
+  }
 }
 
 .mb40 {
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 768px) {
+  .mb40 {
+    margin-bottom: 4rem;
+  }
 }
 
 .relp {
@@ -596,6 +668,7 @@ textarea {
 .heading {
   font-size: clamp(1.5rem, 7.5vmax, 13vmin);
   line-height: 95%;
+  font-weight: 700;
 }
 @media (min-width: 992px) {
   .heading {
@@ -606,11 +679,19 @@ textarea {
 .heading2 {
   font-size: clamp(1.5rem, 2.5vmax, 5vmin);
   line-height: 100%;
+  font-weight: 700;
+}
+
+.heading3 {
+  font-size: clamp(1rem, 1.8vmax, 3.5vmin);
+  line-height: 100%;
+  font-weight: 700;
 }
 
 p {
   line-height: 150%;
   max-width: 40ch;
+  opacity: 0.85;
 }
 @media (min-width: 768px) {
   p {
@@ -643,7 +724,7 @@ p {
 }
 
 .clrdark {
-  --bg-color: black;
+  --bg-color: #191b21;
   --text-color: white;
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -659,7 +740,7 @@ p {
 }
 
 .sectionp {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 }
 @media (min-width: 768px) {
   .sectionp {
@@ -708,7 +789,7 @@ p {
 }
 @media (min-width: 768px) {
   .sectionv_end {
-    padding: 10% 0 10%;
+    padding: 6% 0 6%;
   }
 }
 
@@ -726,7 +807,7 @@ p {
 }
 @media (min-width: 768px) {
   .sectionp_end {
-    padding: 7% 10% 7%;
+    padding: 6% 10% 6%;
   }
 }
 
@@ -784,14 +865,71 @@ p {
   }
 }
 
+.twoThree {
+  display: grid;
+  row-gap: 2rem;
+}
+@media (min-width: 992px) {
+  .twoThree {
+    grid-template-columns: 2fr 3fr;
+    column-gap: 2rem;
+  }
+}
+
+.threeTwo {
+  display: grid;
+  row-gap: 2rem;
+}
+@media (min-width: 992px) {
+  .threeTwo {
+    grid-template-columns: 3fr 2fr;
+    column-gap: 2rem;
+  }
+}
+
 @media (min-width: 992px) {
   .col2 {
     grid-column-start: 2;
   }
 }
 
+@media (min-width: 992px) {
+  .span2 {
+    grid-column: span 2;
+  }
+}
+
 .colGap4 {
   column-gap: 4rem;
+}
+
+.marginCenter {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.justifyGend {
+  justify-self: end;
+}
+
+.justifyGcenter {
+  justify-self: center;
+}
+
+.alignGend {
+  align-self: end;
+}
+
+.alignGcenter {
+  align-self: center;
+}
+
+.alignTextCenter {
+  text-align: center;
+}
+
+.alignTextRight {
+  text-align: right;
 }
 
 picture {
@@ -805,6 +943,10 @@ picture img {
 .flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
 }
 
 /* =============
@@ -859,7 +1001,7 @@ footer p {
     Home
 ============= */
 .intro {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -873,6 +1015,7 @@ footer p {
   position: absolute;
   bottom: 5%;
   padding-left: 2rem;
+  max-width: 80vw;
 }
 @media (min-width: 992px) {
   .intro .intro__text {
@@ -880,30 +1023,34 @@ footer p {
     padding-left: 5%;
   }
 }
+.intro .h1,
 .intro h1 {
   font-size: clamp(1.5rem, 12vmax, 19vmin);
   line-height: 98%;
   padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
-  .intro h1 {
+  .intro .h1,
+.intro h1 {
     font-size: clamp(1.5rem, 15vmax, 15vmin);
   }
 }
 @media (min-width: 992px) {
-  .intro h1 {
-    font-size: clamp(3rem, calc(7vw + 7vh), 18vmin);
+  .intro .h1,
+.intro h1 {
+    font-size: clamp(3rem, calc(5vw + 5vh), 13vmin);
     max-width: 90%;
     line-height: 100%;
   }
 }
 @media (min-width: 1200px) {
-  .intro h1 {
+  .intro .h1,
+.intro h1 {
     max-width: 80%;
   }
 }
 .intro p {
-  font-size: clamp(1.5rem, 2.2vmax, 4vw);
+  font-size: clamp(1.5rem, 2vmax, 4vw);
 }
 
 .works__project {
@@ -920,6 +1067,10 @@ footer p {
   min-height: 300px;
   object-fit: cover;
   object-position: center;
+}
+.works__project__item article {
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .contact {
@@ -997,6 +1148,44 @@ footer p {
 }
 
 .proj__conclusion {
-  padding-top: 30%;
-  padding-bottom: 30%;
+  padding-top: 30vh;
+  padding-bottom: 30vh;
+  height: 100vh;
+}
+
+.signup {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  transition: 0.25s;
+}
+
+.signup__form {
+  display: grid;
+  padding: 4rem;
+  border: 1px solid var(--text-color);
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+.signup__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.signup__email {
+  border: 1px solid var(--text-color);
+  padding: 10px;
+  max-width: 300px;
+}
+
+.signupClose {
+  opacity: 0;
+  pointer-events: none;
 }

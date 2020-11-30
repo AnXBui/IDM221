@@ -49,12 +49,38 @@ a {
 
 body{
   --bg-color: white;
-  --text-color: black;
+  --text-color: #191b21;
   --border-wght: 1.5px;
   color: var(--text-color);
+}
+
+main{
+  background-color: var(--bg-color);
 }
 
 .flexBetween{
   display: flex;
   justify-content: space-between;
+}
+
+body{
+/* width */
+&::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 }

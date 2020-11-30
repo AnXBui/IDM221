@@ -1,1 +1,1 @@
-var $menuButton=$(".menuButton"),$menu=$(".toggleMenu");function menuToggle(){$menu.toggleClass("menuClose"),console.log("triggered")}$menuButton.on("click",menuToggle);
+var $menuButton=$(".menuButton"),$menu=$(".toggleMenu");function menuToggle(){$menu.toggleClass("menuClose")}$menuButton.on("click",menuToggle);

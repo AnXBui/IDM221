@@ -2,6 +2,23 @@
     Helpers
 ============= */
 
+.mobOnly{
+  @include lg{
+    display: none;
+  }
+}
+
+.desktopOnly{
+  display: none;
+  @include lg{
+    display: block;
+  }
+}
+
+.width100{
+  width: 100%;
+}
+
 
 .p10{
   padding: 1rem;
@@ -19,8 +36,17 @@
   padding-bottom: 6rem;
 }
 
+.mb05{
+  margin-bottom: 0.5rem;
+}
+
 .mb10{
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+
+  @include md{
+    margin-bottom: 1rem;
+
+  }
 }
 
 .mt10{
@@ -28,15 +54,27 @@
 }
 
 .mb20{
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+
+  @include md{
+    margin-bottom: 2rem;
+  }
 }
 
 .mb30{
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+
+  @include md{
+    margin-bottom: 3rem;
+  }
 }
 
 .mb40{
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
+
+  @include md{
+    margin-bottom: 4rem;
+  }
 }
 
 .relp{
@@ -46,6 +84,7 @@
 .heading{
   font-size: clamp(1.5rem,7.5vmax,13vmin);
   line-height: 95%;
+  font-weight: 700;
 
   @include lg{
     font-size: clamp(1.5rem, 6vmax, 10vmin);
@@ -55,6 +94,15 @@
 .heading2{
   font-size: clamp(1.5rem,2.5vmax,5vmin);
   line-height: 100%;
+  font-weight: 700;
+
+}
+
+.heading3{
+  font-size: clamp(1rem,1.8vmax,3.5vmin);
+  line-height: 100%;
+  font-weight: 700;
+
 }
 
 
@@ -62,6 +110,7 @@
 p{
   line-height: 150%;
   max-width: 40ch;
+  opacity: 0.85;
 
   @include md{
     font-size: 1.1rem;
@@ -94,11 +143,13 @@ p{
 }
 
 .clrdark{
-  --bg-color: black;
+  --bg-color: #191b21;
   --text-color: white;
   color: var(--text-color);
   background-color: var(--bg-color);
 }
+
+
 
 .sectionh{
   padding: 0 2rem;
@@ -109,7 +160,7 @@ p{
 }
 
 .sectionp{
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
 
   @include md{
     padding: 15% 10% 0;
@@ -152,7 +203,7 @@ p{
   padding: 4rem 0 5rem;
 
   @include md{
-    padding: 10% 0 10%;
+    padding: 6% 0 6%;
   }
 }
 
@@ -168,7 +219,7 @@ p{
   padding: 4rem 2rem 5rem;
 
   @include md{
-    padding: 7% 10% 7%;
+    padding: 6% 10% 6%;
   }
 }
 
@@ -208,6 +259,7 @@ p{
   row-gap: 2rem;
 
 
+
   @include lg{
     grid-template-columns: 1fr 2fr;
     column-gap: 2rem;
@@ -221,6 +273,27 @@ p{
   @include lg{
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
+
+  }
+}
+
+.twoThree{
+  display: grid;
+  row-gap: 2rem;
+
+  @include lg{
+    grid-template-columns: 2fr 3fr;
+    column-gap: 2rem;
+  }
+}
+
+.threeTwo{
+  display: grid;
+  row-gap: 2rem;
+
+  @include lg{
+    grid-template-columns: 3fr 2fr;
+    column-gap: 2rem;
   }
 }
 
@@ -230,8 +303,43 @@ p{
   }
 }
 
+.span2{
+  @include lg{
+    grid-column: span 2;
+  }
+}
+
 .colGap4{
   column-gap: 4rem;
+}
+
+.marginCenter{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.justifyGend{
+  justify-self: end;
+}
+
+.justifyGcenter{
+  justify-self: center;
+}
+
+.alignGend{
+  align-self: end;
+}
+
+.alignGcenter{
+  align-self: center
+}
+
+.alignTextCenter{
+  text-align: center;
+}
+
+.alignTextRight{
+  text-align: right;
 }
 
 picture{
@@ -246,4 +354,8 @@ picture{
 .flex{
   display: flex;
   flex-wrap: wrap;
+}
+
+.grid{
+  display: grid;
 }

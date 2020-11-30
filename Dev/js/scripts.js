@@ -6,5 +6,17 @@ $menuButton.on("click", menuToggle);
 
 function menuToggle(){
   $menu.toggleClass('menuClose');
-  console.log('triggered');
 }
+
+// var $signupButton = $('#signupButton');
+// var $signupForm = $('#signup');
+// var $signupClose = $('#signup .signup__close');
+//
+// $signupButton.on("click", signupToggle);
+// $signupClose.on("click", signupToggle);
+//
+//
+// function signupToggle(){
+//   $signupForm.toggleClass('signupClose');
+//   // console.log('triggered');
+// }
