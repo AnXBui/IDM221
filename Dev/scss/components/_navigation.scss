@@ -7,9 +7,21 @@
   width: 100vw;
   height: 100vh;
   z-index: 98;
-  color: var(--text-color);
   transition: 0.25s;
   transition-timing-function: ease-out;
+
+  &::before{
+    content:'';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top right;
+    transition: 0.35s;
+    background-color: var(--bg-color);
+    z-index: 97;
+  }
 }
 
 .scrollWrapper{
@@ -18,7 +30,10 @@
   overflow-y: scroll;
   padding: 6rem 10% 2rem;
   overscroll-behavior: contain;
-
+  transition: 0.45s;
+  z-index: 98;
+  position: relative;
+  z-index: 98;
 
   @include md{
     display: grid;
@@ -45,6 +60,12 @@
     }
   }
 
+  a{
+    &:hover, &:active{
+      --text-color: var(--accent-color);
+    }
+  }
+
 
 }
 
@@ -63,11 +84,23 @@
     @include lg{
       font-size: 1.3rem;
     }
+
+    &:hover, &:active{
+      --text-color: var(--accent-color);
+    }
   }
 }
 
 .menuClose{
-  transform: translateX(100vw);
+  pointer-events: none;
+  &:before{
+    transform: scale(1,0);
+  }
+
+  .scrollWrapper{
+    opacity:0;
+    transform: translateY(100%);
+  }
 }
 
 .menuFooter{

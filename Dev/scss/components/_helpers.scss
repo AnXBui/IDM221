@@ -149,6 +149,12 @@ p{
   background-color: var(--bg-color);
 }
 
+.clrdark_nobg{
+  --bg-color: #191b21;
+  --text-color: white;
+  color: var(--text-color);
+}
+
 
 
 .sectionh{

@@ -7,26 +7,104 @@ button, input{
   border: 0;
 }
 
+.linkText{
+  transition: color 0.25s;
+  &:hover, &:active{
+    color: var(--accent-color);
+  }
+}
+
+.extIcon{
+  display: inline;
+  height: 0.65em;
+  opacity: 0.75;
+  fill: currentColor;
+  margin-left: 0.25em;
+}
+
+.linkExt{
+  &:hover, &:active{
+    fill: var(--accent-color);
+  }
+}
+
+
+
 .link{
   font-weight: bold;
   font-size: 1.5rem;
   position: relative;
+
   &::before{
     height: var(--border-wght);
     background-color: var(--text-color);
     content:'';
     position: absolute;
     bottom: -0.5rem;
+    left: 0;
     width: 100%;
   }
+
+  &::after{
+    height: calc(var(--border-wght) + 1px) ;
+    background-color: var(--accent-color);
+    content:'';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: 0.25s;
+  }
+
+  &:hover{
+    --text-color: var(--accent-color);
+    &::after{
+      transform: scaleX(1);
+    }
+  }
+
+
 }
 
 .fillButton{
   font-weight: bold;
   font-size: 1.2rem;
   position: relative;
-  background-color: var(--text-color);
   color: var(--bg-color);
   padding: 1rem;
+  z-index: 1;
 
+
+  &::before{
+    background-color: var(--accent-color);
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: 0.25s;
+  }
+
+  &::after{
+    background-color: var(--text-color);
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  &:hover, &:active{
+    &::before{
+      transform: scaleX(1);
+    }
+  }
 }

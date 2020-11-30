@@ -8,6 +8,9 @@ footer{
   justify-content: space-between;
   border-top: var(--border-wght) solid var(--text-color);
   padding: 2rem 2rem 4rem;
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-color);
 
   @include md{
     padding: 2rem 10% 2rem;
