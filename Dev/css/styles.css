@@ -406,21 +406,22 @@ picture img {
   width: 100%;
 }
 
-body {
-  /* width */
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
-}
+/* width */
 body::-webkit-scrollbar {
   width: 12px;
 }
+
+/* Track */
 body::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
+/* Handle */
 body::-webkit-scrollbar-thumb {
   background: #888;
 }
+
+/* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
