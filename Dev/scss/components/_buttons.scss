@@ -1,109 +1,117 @@
 /* =============
     Buttons
 ============= */
-
-button, input{
+button,
+input {
   background-color: transparent;
   border: 0;
 }
-
-.linkText{
-  transition: color 0.25s;
-  &:hover, &:active{
-    color: var(--accent-color);
-  }
+// for external link
+.linkExt {
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
 }
 
-.extIcon{
+.extIcon {
   display: inline;
-  height: 0.65em;
-  opacity: 0.75;
   fill: currentColor;
+  height: 0.65em;
   margin-left: 0.25em;
+  opacity: 0.75;
 }
 
-.linkExt{
-  &:hover, &:active{
+.linkExt {
+  &:active,
+  &:hover {
     fill: var(--accent-color);
   }
 }
-
-
-
-.link{
-  font-weight: bold;
+// Normal Links
+.link {
+  display: inline-block;
   font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
   position: relative;
 
-  &::before{
-    height: var(--border-wght);
+  &::before {
     background-color: var(--text-color);
-    content:'';
-    position: absolute;
     bottom: -0.5rem;
+    content: '';
+    height: var(--border-wght);
     left: 0;
+    position: absolute;
     width: 100%;
   }
 
-  &::after{
-    height: calc(var(--border-wght) + 1px) ;
+  &::after {
     background-color: var(--accent-color);
-    content:'';
-    position: absolute;
     bottom: -0.5rem;
+    content: '';
+    height: calc(var(--border-wght) + 1px);
     left: 0;
-    width: 100%;
-    transform-origin: center left;
+    position: absolute;
     transform: scaleX(0);
+    transform-origin: center left;
     transition: 0.25s;
+    width: 100%;
   }
 
-  &:hover{
+  &:hover {
     --text-color: var(--accent-color);
-    &::after{
+
+    &::after {
       transform: scaleX(1);
     }
   }
-
-
 }
+// text of link hover
+.linkText {
+  transition: color 0.25s;
 
-.fillButton{
-  font-weight: bold;
-  font-size: 1.2rem;
-  position: relative;
+  &:active,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+// Solid fill Buttons
+.fillButton {
   color: var(--bg-color);
+  font-size: 1.2rem;
+  font-weight: bold;
   padding: 1rem;
+  position: relative;
   z-index: 1;
 
-
-  &::before{
+  &::before {
     background-color: var(--accent-color);
-    content:'';
+    content: '';
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transform-origin: center left;
     transform: scaleX(0);
+    transform-origin: center left;
     transition: 0.25s;
+    width: 100%;
+    z-index: -1;
   }
 
-  &::after{
+  &::after {
     background-color: var(--text-color);
-    content:'';
+    content: '';
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
     z-index: -2;
   }
 
-  &:hover, &:active{
-    &::before{
+  &:active,
+  &:hover {
+    &::before {
       transform: scaleX(1);
     }
   }

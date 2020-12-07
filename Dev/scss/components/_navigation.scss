@@ -1,108 +1,108 @@
 /* =============
     Navigation
 ============= */
-
-.toggleMenu{
-  position: fixed;
-  width: 100vw;
+.toggleMenu {
   height: 100vh;
-  z-index: 98;
+  position: fixed;
   transition: 0.25s;
   transition-timing-function: ease-out;
+  width: 100vw;
+  z-index: 98;
 
-  &::before{
-    content:'';
-    width: 100%;
+  &::before {
+    background-color: var(--bg-color);
+    content: '';
     height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     transform-origin: top right;
     transition: 0.35s;
-    background-color: var(--bg-color);
+    width: 100%;
     z-index: 97;
   }
 }
 
-.scrollWrapper{
-  width: 100%;
+.scrollWrapper {
   height: 100%;
   overflow-y: scroll;
-  padding: 6rem 10% 2rem;
   overscroll-behavior: contain;
-  transition: 0.45s;
-  z-index: 98;
+  padding: 6rem 10% 2rem;
   position: relative;
+  transition: 0.45s;
+  width: 100%;
   z-index: 98;
-
-  @include md{
+  z-index: 98;
+  @include md {
     display: grid;
-    grid-template-columns: 3fr 2fr;
     grid-gap: 1.5rem;
+    grid-template-columns: 3fr 2fr;
     padding: 10% 8% 5%;
   }
-  @include lg{
-    grid-template-columns: 2fr 3fr;
+  @include lg {
     grid-gap: 2rem;
-    padding: 8% 10% 8%;
+    grid-template-columns: 2fr 3fr;
+    padding: 8% 10%;
   }
 }
 
-.toggleMenuOptions{
-  padding-bottom: 1.75rem;
+.toggleMenuOptions {
   border-bottom: var(--border-wght) solid var(--text-color);
   margin-bottom: 2.25rem;
-  margin-right: 2rem;
+  padding-bottom: 1.75rem;
+  width: 100%;
+  @include md {
+    margin-right: 2rem;
 
-  @include md{
-    &:last-child{
+    &:last-child {
       border-bottom: 0;
     }
   }
 
-  a{
-    &:hover, &:active{
+  a {
+    &:active,
+    &:hover {
       --text-color: var(--accent-color);
     }
   }
-
-
 }
 
-.toggleMenuLists{
+.toggleMenuLists {
   padding-top: 1rem;
-  .toggleMenuListsItem{
+
+  .toggleMenuListsItem {
     display: block;
+    font-size: 1.2rem;
     line-height: 150%;
-    max-width: 40ch;
     margin-bottom: 1.5rem;
-
-    @include md{
-      font-size: 1.1rem;
-    }
-
-    @include lg{
+    max-width: 40ch;
+    @include md {
       font-size: 1.3rem;
     }
+    @include lg {
+      font-size: 1.4rem;
+    }
 
-    &:hover, &:active{
+    &:active,
+    &:hover {
       --text-color: var(--accent-color);
     }
   }
 }
 
-.menuClose{
+.menuFooter {
+  align-self: end;
+}
+
+.menuClose {
   pointer-events: none;
-  &:before{
+
+  &:before {
     transform: scale(1,0);
   }
 
-  .scrollWrapper{
-    opacity:0;
+  .scrollWrapper {
+    opacity: 0;
     transform: translateY(100%);
   }
-}
-
-.menuFooter{
-  align-self: end;
 }

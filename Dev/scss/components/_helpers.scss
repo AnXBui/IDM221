@@ -2,366 +2,343 @@
     Helpers
 ============= */
 
-.mobOnly{
-  @include lg{
+
+// Responsive Classes
+.mobOnly {
+  @include lg {
     display: none;
   }
 }
 
-.desktopOnly{
+.desktopOnly {
   display: none;
-  @include lg{
+  @include lg {
     display: block;
   }
 }
 
-.width100{
+// Width, paddings and margins
+
+.width100 {
   width: 100%;
 }
 
-
-.p10{
+.p10 {
   padding: 1rem;
 }
 
-.p20{
+.p20 {
   padding: 2rem;
 }
 
-.pb10{
+.pb10 {
   padding-bottom: 1rem;
 }
 
-.pb60{
+.pb60 {
   padding-bottom: 6rem;
 }
 
-.mb05{
+.mb05 {
   margin-bottom: 0.5rem;
 }
 
-.mb10{
+.mb10 {
   margin-bottom: 0.75rem;
-
-  @include md{
+  @include md {
     margin-bottom: 1rem;
-
   }
 }
 
-.mt10{
+.mt10 {
   margin-top: 1rem;
 }
 
-.mb20{
+.mb20 {
   margin-bottom: 1.5rem;
-
-  @include md{
+  @include md {
     margin-bottom: 2rem;
   }
 }
 
-.mb30{
+.mb30 {
   margin-bottom: 2.5rem;
-
-  @include md{
+  @include md {
     margin-bottom: 3rem;
   }
 }
 
-.mb40{
+.mb40 {
   margin-bottom: 3.5rem;
-
-  @include md{
+  @include md {
     margin-bottom: 4rem;
   }
 }
 
-.relp{
-  position: relative;
+.ptop0 {
+  margin-top: 0;
 }
 
-.heading{
-  font-size: clamp(1.5rem,7.5vmax,13vmin);
-  line-height: 95%;
-  font-weight: 700;
-
-  @include lg{
-    font-size: clamp(1.5rem, 6vmax, 10vmin);
-  }
+.mbot0 {
+  margin-bottom: 0;
 }
 
-.heading2{
-  font-size: clamp(1.5rem,2.5vmax,5vmin);
-  line-height: 100%;
-  font-weight: 700;
-
-}
-
-.heading3{
-  font-size: clamp(1rem,1.8vmax,3.5vmin);
-  line-height: 100%;
-  font-weight: 700;
-
-}
-
-
-
-p{
-  line-height: 150%;
-  max-width: 40ch;
-  opacity: 0.85;
-
-  @include md{
-    font-size: 1.1rem;
-  }
-
-  @include lg{
-    font-size: 1.3rem;
-  }
+.noBotMargin {
+  margin-bottom: 0;
 }
 
 
 
 
-.linkExt{
-  font-weight: bold;
-  font-size: 1.5rem;
-  position: relative;
-}
+// Border
 
-.bordBot{
+.bordBot {
   border-bottom: var(--border-wght) solid var(--text-color);
 }
 
-.bordBotMob{
-  border-bottom: var(--border-wght) solid var(--text-color);
+// Border for Mobile Only
 
-  @include lg{
+.bordBotMob {
+  border-bottom: var(--border-wght) solid var(--text-color);
+  @include lg {
     border-bottom: 0;
   }
 }
 
-.clrdark{
+// Dark Themes Section
+
+
+.clrdark {
   --bg-color: #191b21;
   --text-color: white;
-  color: var(--text-color);
   background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-.clrdark_nobg{
+.clrdark_nobg {
   --bg-color: #191b21;
   --text-color: white;
   color: var(--text-color);
 }
 
 
+// Section Templates
 
-.sectionh{
+
+.sectionh {
   padding: 0 2rem;
-
-  @include md{
+  @include md {
     padding: 0 10%;
   }
 }
 
-.sectionp{
-  padding: 3rem 2rem;
-
-  @include md{
-    padding: 15% 10% 0;
+.sectionp {
+  padding: 2rem;
+  @include md {
+    padding: 5% 10% 5%;
   }
 }
 
-.sectionp2{
-  padding: 2rem 2rem;
-
-  @include md{
+.sectionp2 {
+  padding: 1rem 2rem;
+  @include md {
     padding: 5% 10% 0;
   }
 }
 
-.sectionv2{
-  padding: 2rem 0 2rem;
+.sectionp2t0{
+  padding: 0rem 2rem 1rem;
+  @include md {
+    padding: 5% 10% 0;
+  }
+}
 
-  @include md{
+.sectionv2 {
+  padding: 1rem 0;
+  @include md {
     padding: 5% 0 0;
   }
 }
 
-.sectionp_first{
-  padding: 2rem 2rem 2rem;
-
-  @include md{
-    padding: 5% 10% 10%;
+.sectionv2_end{
+  padding: 0rem 0 1rem;
+  @include md {
+    padding: 5% 0 0;
   }
 }
 
-.sectionv{
-  padding: 2rem 0 4rem;
-
-  @include md{
-    padding: 10% 0 5%;
+.sectionp_first {
+  padding: 2rem;
+  @include md {
+    padding: 5% 10% 5%;
   }
 }
 
-.sectionv_end{
-  padding: 4rem 0 5rem;
-
-  @include md{
-    padding: 6% 0 6%;
+.sectionv {
+  padding: 2rem 0;
+  @include md {
+    padding: 5% 0 5%;
   }
 }
 
-.sectionv_first{
-  padding: 0 0 5rem;
+.sectionv_end {
+  padding: 2rem 0 3rem;
+  @include md {
+    padding: 5% 0 10%;
+  }
+}
 
-  @include md{
+.sectionv2_end {
+  padding: 2rem 0 3rem;
+  @include md {
+    padding: 5% 0 10%;
+  }
+}
+
+.sectionv_first {
+  padding: 0 0 2rem;
+  @include md {
     padding: 0 0 10%;
   }
 }
 
-.sectionp_end{
-  padding: 4rem 2rem 5rem;
-
-  @include md{
-    padding: 6% 10% 6%;
+.sectionp_end {
+  padding: 2rem 2rem 3rem;
+  @include md {
+    padding: 5% 10% 10%;
   }
 }
 
-.textGroup{
+.textGroup {
   display: grid;
-
-  @include lg{
-    grid-template-columns: 50% 50%;
+  @include lg {
     grid-gap: 2rem;
+    grid-template-columns: 50% 50%;
   }
 }
 
-.twoCol{
+// Column System for desktop+
+
+
+.twoCol {
   display: grid;
   row-gap: 2rem;
-
-
-  @include lg{
+  @include lg {
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
   }
 }
 
-.threeCol{
+.threeCol {
   display: grid;
   row-gap: 2rem;
-
-
-  @include lg{
+  @include lg {
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2rem;
   }
 }
 
-.oneTwo{
+.oneTwo {
   display: grid;
   row-gap: 2rem;
-
-
-
-  @include lg{
+  @include lg {
+    column-gap: 2rem;
     grid-template-columns: 1fr 2fr;
-    column-gap: 2rem;
   }
 }
 
-.twoOne{
+.twoOne {
   display: grid;
   row-gap: 2rem;
-
-  @include lg{
+  @include lg {
+    column-gap: 2rem;
     grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
-
   }
 }
 
-.twoThree{
+.twoThree {
   display: grid;
   row-gap: 2rem;
-
-  @include lg{
+  @include lg {
+    column-gap: 2rem;
     grid-template-columns: 2fr 3fr;
-    column-gap: 2rem;
   }
 }
 
-.threeTwo{
+.threeTwo {
   display: grid;
   row-gap: 2rem;
-
-  @include lg{
-    grid-template-columns: 3fr 2fr;
+  @include lg {
     column-gap: 2rem;
+    grid-template-columns: 3fr 2fr;
   }
 }
 
-.col2{
-  @include lg{
+.col2 {
+  @include lg {
     grid-column-start: 2;
   }
 }
 
-.span2{
-  @include lg{
+.span2 {
+  @include lg {
     grid-column: span 2;
   }
 }
 
-.colGap4{
+.rowGap1 {
+  row-gap: 1rem;
+}
+
+.colGap4 {
   column-gap: 4rem;
 }
 
-.marginCenter{
+// Justify and Positioning
+
+.marginCenter {
   margin: 0 auto;
   text-align: center;
 }
 
-.justifyGend{
+.justifyGend {
   justify-self: end;
 }
 
-.justifyGcenter{
+.justifyGcenter {
   justify-self: center;
 }
 
-.alignGend{
+.alignGend {
   align-self: end;
 }
 
-.alignGcenter{
-  align-self: center
+.alignGcenter {
+  align-self: center;
 }
 
-.alignTextCenter{
+.alignTextCenter {
   text-align: center;
 }
 
-.alignTextRight{
+.alignTextRight {
   text-align: right;
 }
 
-picture{
-  width: 100%;
-
-  img{
-    width: 100%;
-    object-fit: cover;
-  }
+.relp {
+  position: relative;
 }
 
-.flex{
+.flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-.grid{
+.flexBetween{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid {
   display: grid;
 }

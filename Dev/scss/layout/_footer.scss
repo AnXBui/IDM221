@@ -1,23 +1,21 @@
 /* =============
     Footer
 ============= */
-
-footer{
+footer {
+  background-color: var(--bg-color);
+  border-top: var(--border-wght) solid var(--text-color);
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  border-top: var(--border-wght) solid var(--text-color);
   padding: 2rem 2rem 4rem;
   position: relative;
   z-index: 2;
-  background-color: var(--bg-color);
-
-  @include md{
-    padding: 2rem 10% 2rem;
+  @include md {
+    padding: 2rem 10%;
   }
 
-  p{
-    padding-right: 2rem;
+  p {
     padding-bottom: 2rem;
+    padding-right: 2rem;
   }
 }
