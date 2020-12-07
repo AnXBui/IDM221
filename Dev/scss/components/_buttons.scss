@@ -6,7 +6,12 @@ input {
   background-color: transparent;
   border: 0;
 }
-// for external link
+
+
+/* =============
+for external link
+============= */
+
 .linkExt {
   font-size: 1.5rem;
   font-weight: bold;
@@ -27,7 +32,10 @@ input {
     fill: var(--accent-color);
   }
 }
-// Normal Links
+
+/* =============
+ Normal Links
+============= */
 .link {
   display: inline-block;
   font-size: 1.5rem;
@@ -66,7 +74,10 @@ input {
     }
   }
 }
-// text of link hover
+
+/* =============
+ Text of Link on Hover
+============= */
 .linkText {
   transition: color 0.25s;
 
@@ -75,7 +86,11 @@ input {
     color: var(--accent-color);
   }
 }
-// Solid fill Buttons
+
+/* =============
+ Solid fill Button
+============= */
+
 .fillButton {
   color: var(--bg-color);
   font-size: 1.2rem;

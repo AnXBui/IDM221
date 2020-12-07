@@ -513,6 +513,9 @@ input {
   border: 0;
 }
 
+/* =============
+for external link
+============= */
 .linkExt {
   font-size: 1.5rem;
   font-weight: bold;
@@ -531,6 +534,9 @@ input {
   fill: var(--accent-color);
 }
 
+/* =============
+ Normal Links
+============= */
 .link {
   display: inline-block;
   font-size: 1.5rem;
@@ -566,6 +572,9 @@ input {
   transform: scaleX(1);
 }
 
+/* =============
+ Text of Link on Hover
+============= */
 .linkText {
   transition: color 0.25s;
 }
@@ -573,6 +582,9 @@ input {
   color: var(--accent-color);
 }
 
+/* =============
+ Solid fill Button
+============= */
 .fillButton {
   color: var(--bg-color);
   font-size: 1.2rem;
@@ -737,6 +749,9 @@ textarea {
 /* =============
     Helpers
 ============= */
+/* =============
+ Responsive Classes
+============= */
 @media (min-width: 992px) {
   .mobOnly {
     display: none;
@@ -752,6 +767,9 @@ textarea {
   }
 }
 
+/* =============
+ Width, Paddings, Margins
+============= */
 .width100 {
   width: 100%;
 }
@@ -828,10 +846,16 @@ textarea {
   margin-bottom: 0;
 }
 
+/* =============
+  Borders
+============= */
 .bordBot {
   border-bottom: var(--border-wght) solid var(--text-color);
 }
 
+/* =============
+  Borders for mobile only
+============= */
 .bordBotMob {
   border-bottom: var(--border-wght) solid var(--text-color);
 }
@@ -841,6 +865,9 @@ textarea {
   }
 }
 
+/* =============
+  Dark Themes Section
+============= */
 .clrdark {
   --bg-color: #191b21;
   --text-color: white;
@@ -854,6 +881,9 @@ textarea {
   color: var(--text-color);
 }
 
+/* =============
+  Section Templates
+============= */
 .sectionh {
   padding: 0 2rem;
 }
@@ -972,6 +1002,9 @@ textarea {
   }
 }
 
+/* =============
+  Columns
+============= */
 .twoCol {
   display: grid;
   row-gap: 2rem;
@@ -994,6 +1027,9 @@ textarea {
   }
 }
 
+/* =============
+   Non-equal Columns
+============= */
 .oneTwo {
   display: grid;
   row-gap: 2rem;
@@ -1038,6 +1074,9 @@ textarea {
   }
 }
 
+/* =============
+   Grid Items
+============= */
 @media (min-width: 992px) {
   .col2 {
     grid-column-start: 2;
@@ -1050,6 +1089,9 @@ textarea {
   }
 }
 
+/* =============
+   Row Gaps
+============= */
 .rowGap1 {
   row-gap: 1rem;
 }
@@ -1058,6 +1100,9 @@ textarea {
   column-gap: 4rem;
 }
 
+/* =============
+  Justify and Position
+============= */
 .marginCenter {
   margin: 0 auto;
   text-align: center;
@@ -1091,6 +1136,9 @@ textarea {
   position: relative;
 }
 
+/* =============
+  Flex & Grid
+============= */
 .flex {
   display: flex;
   flex-wrap: wrap;

@@ -2,8 +2,9 @@
     Helpers
 ============= */
 
-
-// Responsive Classes
+/* =============
+ Responsive Classes
+============= */
 .mobOnly {
   @include lg {
     display: none;
@@ -17,7 +18,9 @@
   }
 }
 
-// Width, paddings and margins
+/* =============
+ Width, Paddings, Margins
+============= */
 
 .width100 {
   width: 100%;
@@ -90,13 +93,17 @@
 
 
 
-// Border
+/* =============
+  Borders
+============= */
 
 .bordBot {
   border-bottom: var(--border-wght) solid var(--text-color);
 }
 
-// Border for Mobile Only
+/* =============
+  Borders for mobile only
+============= */
 
 .bordBotMob {
   border-bottom: var(--border-wght) solid var(--text-color);
@@ -105,7 +112,9 @@
   }
 }
 
-// Dark Themes Section
+/* =============
+  Dark Themes Section
+============= */
 
 
 .clrdark {
@@ -121,9 +130,9 @@
   color: var(--text-color);
 }
 
-
-// Section Templates
-
+/* =============
+  Section Templates
+============= */
 
 .sectionh {
   padding: 0 2rem;
@@ -217,8 +226,9 @@
   }
 }
 
-// Column System for desktop+
-
+/* =============
+  Columns
+============= */
 
 .twoCol {
   display: grid;
@@ -238,7 +248,10 @@
   }
 }
 
-// Non-equal columns
+
+/* =============
+   Non-equal Columns
+============= */
 
 .oneTwo {
   display: grid;
@@ -276,7 +289,9 @@
   }
 }
 
-// Columns and rows for items
+/* =============
+   Grid Items
+============= */
 
 .col2 {
   @include lg {
@@ -290,7 +305,9 @@
   }
 }
 
-// Row gaps
+/* =============
+   Row Gaps
+============= */
 
 .rowGap1 {
   row-gap: 1rem;
@@ -300,7 +317,9 @@
   column-gap: 4rem;
 }
 
-// Justify and Positioning
+/* =============
+  Justify and Position
+============= */
 
 .marginCenter {
   margin: 0 auto;
@@ -335,7 +354,9 @@
   position: relative;
 }
 
-// flex and grid settings
+/* =============
+  Flex & Grid
+============= */
 
 .flex {
   display: flex;
