@@ -51,18 +51,32 @@
       }
     }
   }
+
+
 }
+
+
 
 .resume__name {
   border-bottom: 0;
   padding-left: 2rem;
   @include lg {
-    padding-left: 35%;
+    padding-left: 30%;
   }
 
   > div {
     position: sticky;
     top: 40vh;
+  }
+}
+
+.resume__education{
+  padding-top: 2rem;
+  border-top: var(--border-wght) var(--text-color) solid;
+
+  @include lg{
+    padding-top: 0;
+    border-top: 0;
   }
 }
 

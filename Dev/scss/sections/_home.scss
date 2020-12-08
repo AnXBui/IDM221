@@ -46,8 +46,16 @@
 
 .works__project {
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: 2rem;
   padding-bottom: 3rem;
+
+  @include md{
+    grid-gap: 3rem;
+  }
+
+  @include lg{
+    grid-gap: 10vh;
+  }
 }
 
 .works__project__item {
@@ -62,7 +70,7 @@
     }
   }
 
-  article {
+  div {
     margin-top: 0.5rem;
     width: 100%;
   }
@@ -70,5 +78,5 @@
 
 .contact {
   padding-bottom: 15%;
-  padding-top: 25%;
+  padding-top: 15%;
 }

@@ -311,6 +311,14 @@
 
 .rowGap1 {
   row-gap: 1rem;
+
+  @include md{
+    row-gap: 2rem;
+  }
+
+  @include lg{
+    row-gap: 3rem;
+  }
 }
 
 .colGap4 {
